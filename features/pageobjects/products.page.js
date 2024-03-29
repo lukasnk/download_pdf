@@ -2,33 +2,24 @@ class ProductsPage {
     get serialNumberInformation() {
         return $('div.aside-top .aside-product');
     }
-
-    get leftMenuData(){
-        return $$('ul.aside-menu li')[0]
-    }    get leftMenuDocuments(){
+    get leftMenuDocuments(){
         return $$('ul.aside-menu li')[1]
     }
-
     get sectionOperation() {
         return $$('h3.docsections')[0];
     }
-
     get sectionDeclarationsCertificates() {
         return $$('h3.docsections')[1];
     }
-
     get sectionDrawingsPlans() {
         return $$('h3.docsections')[2];
     }
-
     get sectionComponents() {
         return $$('h3.docsections')[3];
     }
-
     get getTitleCards() {
         return $$('h3.card-title');
     }
-
     async clickTitleCardByText(text) {
         const titleCards = await this.getTitleCards;
         for (const titleCard of titleCards) {

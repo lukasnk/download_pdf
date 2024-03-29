@@ -1,6 +1,4 @@
 class HomePage {
-    get productNumberInput() { return $('#locatorForProductNumber'); }
-
     get headerText(){
         return $('header h1');
     }
@@ -13,7 +11,6 @@ class HomePage {
     get searchButton() {
         return  $('span=Search');
     }
-
     async open(url) {
         await browser.url(process.env.BASE_URL);
         await browser.maximizeWindow();
