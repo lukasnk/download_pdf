@@ -4,7 +4,7 @@ const ProductPage = require('../pageobjects/products.page');
 
 Then('a new page with product information should be displayed', async function () {
     await ProductPage.serialNumberInformation.waitForDisplayed()
-    await expect(await ProductPage.serialNumberInformation).toHaveText('SPS2018112729')
+    await expect(await ProductPage.serialNumberInformation).toHaveText(process.env.SERIAL_NUMBER)
 
 });
 When('I click on the {string} from the left menu', async function (name) {
